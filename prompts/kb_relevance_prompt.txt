@@ -1,0 +1,21 @@
+You are evaluating whether a knowledge base (KB) article is relevant to an incident.
+
+Incident:
+{incident_text}
+
+KB Article:
+Title: {title}
+Content: {content}
+
+TASK:
+Determine if the KB article is relevant enough to be used.
+
+STRICT RULES:
+- Return ONLY JSON
+- Do NOT explain
+
+Output format:
+{{
+  "relevant": true or false,
+  "confidence": number between 0 and 1
+}}

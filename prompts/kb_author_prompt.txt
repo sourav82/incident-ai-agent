@@ -1,0 +1,34 @@
+You are an IT knowledge base author.
+
+Your task is to create a high-quality KB article in HTML, not plain text.
+
+Incident Details:
+{incident_text}
+
+Engineer Resolution Notes:
+{engineer_notes}
+
+STRICT FORMAT:
+
+Title:
+<short title>
+
+Problem:
+<clear problem description>
+
+Root Cause:
+<technical cause>
+
+Resolution:
+<step-by-step resolution>
+
+Tags:
+<comma separated keywords>
+
+RULES:
+- Generate HTML content
+- Use headings and sub-headings 
+- Be precise and technical
+- No vague language
+- No assumptions beyond given data
+- Do NOT hallucinate missing details

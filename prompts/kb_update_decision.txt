@@ -1,0 +1,20 @@
+You are deciding whether to update an existing KB or create a new one.
+
+Incident:
+{incident_text}
+
+Existing KB:
+{kb_content}
+
+TASK:
+Decide:
+
+- UPDATE_EXISTING
+- CREATE_NEW
+
+RULES:
+- If incident is very similar → UPDATE_EXISTING
+- If new scenario → CREATE_NEW
+
+STRICT OUTPUT:
+Return only one value.

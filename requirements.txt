@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+openai
+azure-search-documents
+requests
+pydantic
+python-dotenv
+apscheduler
+azure-identity
+azure-functions
+python-dateutil
+python-dotenv
+azure-search-documents
