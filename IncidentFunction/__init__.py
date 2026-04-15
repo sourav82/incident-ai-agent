@@ -16,9 +16,13 @@ async def main(req: func.HttpRequest) -> func.HttpResponse:
 
         body = json.loads(sanitized) #req.get_json()
 
+        has_attachments = bool(body.get("attachments"))
+
         incident = Incident(**body)
 
-        result = await process_incident(incident)
+        result = await process_incident(incident, has_attachments)
+
+        #result = await process_incident(incident)
 
         return func.HttpResponse(
             json.dumps({"status": "ok", "result": result}),

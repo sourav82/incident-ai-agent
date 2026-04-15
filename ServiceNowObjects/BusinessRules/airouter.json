@@ -1,0 +1,12 @@
+(function executeRule(current, previous) {
+
+    var rm = new sn_ws.RESTMessageV2('AzureIncidentRouter', 'sendIncident');
+
+    rm.setStringParameter('number', current.number.toString());
+    rm.setStringParameter('short_description', current.short_description.toString());
+    rm.setStringParameter('description', current.description.toString());
+    rm.setStringParameter('sys_id', current.sys_id.toString());
+
+    var response = rm.execute();
+
+})(current, previous);

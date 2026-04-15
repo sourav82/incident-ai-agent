@@ -1,0 +1,22 @@
+(function executeRule(current, previous) {
+
+
+    var rm = new sn_ws.RESTMessageV2(
+        'Intelligent ITSM KB Creator',
+        'post'
+    );
+
+    rm.setRequestHeader("Content-Type","application/json");
+	rm.setStringParameter('number', current.number.toString());
+	rm.setStringParameter('short_description', current.short_description.toString());
+	rm.setStringParameter('description', current.description.toString());
+	rm.setStringParameter('close_notes', current.close_notes.toString());
+	rm.setStringParameter('work_notes', current.work_notes.toString());
+	rm.setStringParameter('resolution_code', current.close_code.toString());
+	rm.setStringParameter('resolved_by', current.resolved_by.toString());
+    rm.setStringParameter("sys_id", current.sys_id.toString());
+
+    var response = rm.execute();
+
+
+})(current, previous);

@@ -5,11 +5,12 @@ from services.servicenow import update_notes
 from services.email import send_outlier_email
 from agents.decision import detect_outlier
 
-async def process_incident(incident):
+
+async def process_incident(incident, has_attachments=False):
 
     text = incident.short_description + " " + incident.description
 
-    classification = classify_incident(incident.short_description, incident.description)
+    classification = await classify_incident(incident, has_attachments)
 
     kb_results = retrieve_kb(text)
 

@@ -23,4 +23,8 @@ Incident:
 Short Description: {short_description}
 Description: {description}
 
-Output:
+Output format:
+<AssignmentGroup>|<Confidence between 0 and 1>
+
+Example:
+Network-L2|0.92
